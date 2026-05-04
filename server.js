@@ -18,7 +18,10 @@ if (!fs.existsSync(uploadsDir)) {
 
 // 🔥 CORS مضبوط
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    "https://learn-cook-frontend.vercel.app"
+  ],
   credentials: true
 }));
 
